@@ -1,0 +1,29 @@
+.menu {
+    display: flex;
+    height: 50px;
+    width: 100%;
+
+    justify-content: flex-end;
+
+    align-items: center;
+    list-style: none;
+    margin-top: 18px;
+}
+
+.menu a {
+    color: black;
+    font-size: 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-left: 10px;
+    transition: 0.5s;
+    border: 1px solid transparent;
+    padding: 5px;
+    transition: 0.3s;
+    font-family: 'Raleway', sans-serif;
+}
+
+.menu a:hover {
+    border: 1px solid black;
+}

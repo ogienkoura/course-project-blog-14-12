@@ -1,0 +1,18 @@
+.header__logo {
+    display: flex;
+    text-decoration: none;
+
+    text-transform: uppercase;
+    & img {
+        align-self: center;
+        height: 40px;
+        width: 40px;
+    }
+    & h2 {
+        align-self: center;
+        color: black;
+        font-weight: 500;
+        font-size: 35px;
+        font-family: 'Raleway', sans-serif;
+    }
+}
