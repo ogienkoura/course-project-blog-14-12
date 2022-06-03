@@ -1,0 +1,26 @@
+.news__item {
+    display: block;
+    transition: 0.3s;
+    &-image img {
+        width: 100%;
+        height: auto;
+        max-height: 500px;
+    }
+    &-desc {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        a {
+            text-decoration: none;
+            line-height: 20px;
+            color: black;
+        }
+    }
+    &.lifestyle,
+    &.places {
+        width: 50%;
+    }
+}
+
+.news__item:hover {
+    opacity: 80%;
+}

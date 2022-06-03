@@ -5,7 +5,7 @@ import logo from 'assets/main-logo.png'
 export const Logo = () => {
     return (
         <>
-            <a class="header__logo" href="#">
+            <a className="header__logo" href="#">
                 <img src={logo} alt="" />
                 <h2>Skate Blog</h2>
             </a>
