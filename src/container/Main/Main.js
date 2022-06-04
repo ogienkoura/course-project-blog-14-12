@@ -9,26 +9,59 @@ export const Main = () => {
     return (
         <>
             <main>
-                <div className="content__header">
-                    <Line />
-                    <div className="content__header-title">
-                        <h3>News</h3>
+                <section className="news">
+                    <div className="content__header">
+                        <Line />
+                        <div className="content__header-title">
+                            <h3>News</h3>
+                        </div>
                     </div>
-                </div>
 
-                <Grid
-                    container
-                    spacing={2}
-                    direction="row"
-                    justifyContent="center"
-                    alignItems="center"
-                >
-                    {news.map((article) => (
-                        <Grid item xs={12} sm={6} md={4}>
-                            <NewsItem description="fgsddsg" date="33513" />
+                    <Grid
+                        container
+                        spacing={2}
+                        direction="row"
+                        justifyContent="center"
+                        alignItems="center"
+                    >
+                        {news.map(({ id, image, description, date }) => (
+                            <Grid item xs={12} sm={6} md={4} key={id}>
+                                <NewsItem
+                                    description={description}
+                                    date={date}
+                                    image={image}
+                                />
+                            </Grid>
+                        ))}
+                    </Grid>
+                </section>
+
+                <section className="lifestyle-places">
+                    <Grid
+                        container
+                        spacing={2}
+                        direction="row"
+                        // justifyContent="center"
+                        // alignItems="center"
+                    >
+                        <Grid item xs={12} sm={6}>
+                            <div className="content__header">
+                                <Line />
+                                <div className="content__header-title">
+                                    <h3>Lifestyle</h3>
+                                </div>
+                            </div>
                         </Grid>
-                    ))}
-                </Grid>
+                        <Grid item xs={12} sm={6}>
+                            <div className="content__header">
+                                <Line />
+                                <div className="content__header-title">
+                                    <h3>Places</h3>
+                                </div>
+                            </div>
+                        </Grid>
+                    </Grid>
+                </section>
             </main>
         </>
     )

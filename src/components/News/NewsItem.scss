@@ -1,10 +1,13 @@
 .news__item {
     display: block;
     transition: 0.3s;
-    &-image img {
-        width: 100%;
-        height: auto;
-        max-height: 500px;
+    &-image {
+        text-align: center;
+        img {
+            width: 100%;
+            height: auto;
+            max-height: 200px;
+        }
     }
     &-desc {
         margin-top: 10px;

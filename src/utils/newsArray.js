@@ -1,15 +1,24 @@
 const news = [
     {
-        description: 'gsgdsg',
-        date: '323213',
+        id: 1,
+        image: 'images/news-1.jpg',
+        description:
+            'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque, commodi.',
+        date: 'March 12. 2020',
     },
     {
-        description: 'dfgdfgfdgdf',
-        date: '7769679',
+        id: 2,
+        image: 'images/news-2.jpg',
+        description:
+            'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque, commodi.',
+        date: 'March 12. 2020',
     },
     {
-        description: 'jhgjghjjf',
-        date: '98896',
+        id: 3,
+        image: 'images/news-3.jpg',
+        description:
+            'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque, commodi.',
+        date: 'March 12. 2020',
     },
 ]
 
