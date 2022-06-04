@@ -4,6 +4,8 @@ import './Main.scss'
 import { NewsItem } from 'components/News/NewsItem'
 import { Grid } from '@mui/material'
 import news from 'utils/newsArray'
+import lifestyle from 'utils/lifestyleArray'
+import { LifestyleItem } from 'components/Lifestyle/Lifestyle'
 
 export const Main = () => {
     return (
@@ -40,7 +42,6 @@ export const Main = () => {
                     <Grid
                         container
                         spacing={2}
-                        direction="row"
                         // justifyContent="center"
                         // alignItems="center"
                     >
@@ -51,7 +52,21 @@ export const Main = () => {
                                     <h3>Lifestyle</h3>
                                 </div>
                             </div>
+                            <Grid container spacing={1} direction="row">
+                                {lifestyle.map(
+                                    ({ id, image, description, date }) => (
+                                        <Grid item xs={12} sm={6} key={id}>
+                                            <LifestyleItem
+                                                description={description}
+                                                date={date}
+                                                image={image}
+                                            />
+                                        </Grid>
+                                    )
+                                )}
+                            </Grid>
                         </Grid>
+
                         <Grid item xs={12} sm={6}>
                             <div className="content__header">
                                 <Line />

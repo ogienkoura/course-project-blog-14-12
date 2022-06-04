@@ -6,7 +6,7 @@
         img {
             width: 100%;
             height: auto;
-            max-height: 200px;
+            max-height: 500px;
         }
     }
     &-desc {
@@ -17,10 +17,6 @@
             line-height: 20px;
             color: black;
         }
-    }
-    &.lifestyle,
-    &.places {
-        width: 50%;
     }
 }
 
