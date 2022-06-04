@@ -6,11 +6,13 @@ import { Line } from 'components/Line/Line'
 import { NewsItem } from 'components/News/NewsItem'
 import { LifestyleItem } from 'components/Lifestyle/Lifestyle'
 import { PlacesItem } from 'components/Places/Places'
+import { About } from 'components/About/About'
+import { TeamItem } from 'components/Team/Team'
 
 import news from 'utils/newsArray'
 import lifestyle from 'utils/lifestyleArray'
 import places from 'utils/placesArray'
-import { About } from 'components/About/About'
+import team from 'utils/teamArray'
 
 export const Main = () => {
     return (
@@ -109,6 +111,19 @@ export const Main = () => {
                                     <h3>Meet the team</h3>
                                 </div>
                             </div>
+                            <Grid container spacing={1} direction="row">
+                                {team.map(
+                                    ({ id, image, description, name }) => (
+                                        <Grid item xs={12} sm={6} key={id}>
+                                            <TeamItem
+                                                description={description}
+                                                name={name}
+                                                image={image}
+                                            />
+                                        </Grid>
+                                    )
+                                )}
+                            </Grid>
                         </Grid>
                     </Grid>
                 </section>

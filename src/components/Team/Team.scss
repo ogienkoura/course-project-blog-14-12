@@ -1,0 +1,27 @@
+.team {
+    display: flex;
+    flex-wrap: wrap;
+    &__person {
+        display: flex;
+        margin-bottom: 10px;
+        &-photo {
+            padding-top: 10px;
+            max-height: 200px;
+            height: auto;
+            max-width: 130px;
+        }
+        &-name {
+            font-size: 20px;
+            font-weight: 500;
+        }
+        &-desc {
+            margin-top: 10px;
+            margin-bottom: 10px;
+            font-size: 15px;
+        }
+        &-info {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+    }
+}
