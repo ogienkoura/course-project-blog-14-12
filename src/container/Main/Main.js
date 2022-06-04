@@ -1,11 +1,16 @@
 import React from 'react'
-import { Line } from 'components/Line/Line'
 import './Main.scss'
-import { NewsItem } from 'components/News/NewsItem'
+
 import { Grid } from '@mui/material'
+import { Line } from 'components/Line/Line'
+import { NewsItem } from 'components/News/NewsItem'
+import { LifestyleItem } from 'components/Lifestyle/Lifestyle'
+import { PlacesItem } from 'components/Places/Places'
+
 import news from 'utils/newsArray'
 import lifestyle from 'utils/lifestyleArray'
-import { LifestyleItem } from 'components/Lifestyle/Lifestyle'
+import places from 'utils/placesArray'
+import { About } from 'components/About/About'
 
 export const Main = () => {
     return (
@@ -39,12 +44,7 @@ export const Main = () => {
                 </section>
 
                 <section className="lifestyle-places">
-                    <Grid
-                        container
-                        spacing={2}
-                        // justifyContent="center"
-                        // alignItems="center"
-                    >
+                    <Grid container spacing={2}>
                         <Grid item xs={12} sm={6}>
                             <div className="content__header">
                                 <Line />
@@ -72,6 +72,41 @@ export const Main = () => {
                                 <Line />
                                 <div className="content__header-title">
                                     <h3>Places</h3>
+                                </div>
+                            </div>
+                            <Grid container spacing={1} direction="row">
+                                {places.map(
+                                    ({ id, image, description, date }) => (
+                                        <Grid item xs={12} sm={6} key={id}>
+                                            <PlacesItem
+                                                description={description}
+                                                date={date}
+                                                image={image}
+                                            />
+                                        </Grid>
+                                    )
+                                )}
+                            </Grid>
+                        </Grid>
+                    </Grid>
+                </section>
+
+                <section className="about">
+                    <Grid container spacing={2}>
+                        <Grid item xs={12} sm={4}>
+                            <div className="content__header">
+                                <Line />
+                                <div className="content__header-title">
+                                    <h3>About</h3>
+                                </div>
+                            </div>
+                            <About />
+                        </Grid>
+                        <Grid item xs={12} sm={8}>
+                            <div className="content__header">
+                                <Line />
+                                <div className="content__header-title">
+                                    <h3>Meet the team</h3>
                                 </div>
                             </div>
                         </Grid>
