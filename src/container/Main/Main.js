@@ -8,6 +8,8 @@ import { LifestyleItem } from 'components/Lifestyle/Lifestyle'
 import { PlacesItem } from 'components/Places/Places'
 import { About } from 'components/About/About'
 import { TeamItem } from 'components/Team/Team'
+import { Contact } from 'components/Contact/Contact'
+import { Find } from 'components/Find/Find'
 
 import news from 'utils/newsArray'
 import lifestyle from 'utils/lifestyleArray'
@@ -114,7 +116,7 @@ export const Main = () => {
                             <Grid container spacing={1} direction="row">
                                 {team.map(
                                     ({ id, image, description, name }) => (
-                                        <Grid item xs={12} sm={6} key={id}>
+                                        <Grid item xs={12} md={6} key={id}>
                                             <TeamItem
                                                 description={description}
                                                 name={name}
@@ -124,6 +126,33 @@ export const Main = () => {
                                     )
                                 )}
                             </Grid>
+                        </Grid>
+                    </Grid>
+                </section>
+
+                <section className="contact">
+                    <Grid container spacing={2}>
+                        <Grid item xs={12}>
+                            <div className="content__header">
+                                <Line />
+                                <div className="content__header-title">
+                                    <h3>Contact us</h3>
+                                </div>
+                            </div>
+                        </Grid>
+                        <Grid item xs={12} sm={6}>
+                            <Contact />
+                        </Grid>
+                        <Grid
+                            container
+                            item
+                            xs={12}
+                            sm={6}
+                            direction="row"
+                            justifyContent="center"
+                            alignItems="center"
+                        >
+                            <Find />
                         </Grid>
                     </Grid>
                 </section>

@@ -12,8 +12,8 @@ export const App = () => {
             <Header />
             <Container>
                 <Main />
-                <Footer />
             </Container>
+            <Footer />
         </>
     )
 }

@@ -7,11 +7,15 @@ export const TeamItem = ({ image, description, name }) => {
         <>
             <Card>
                 <CardContent>
-                    <div class="team__person">
-                        <img class="team__person-photo" src={image} alt="" />
-                        <div class="team__person-info">
-                            <p class="team__person-name">{name}</p>
-                            <p class="team__person-desc">{description}</p>
+                    <div className="team__person">
+                        <img
+                            className="team__person-photo"
+                            src={image}
+                            alt=""
+                        />
+                        <div className="team__person-info">
+                            <p className="team__person-name">{name}</p>
+                            <p className="team__person-desc">{description}</p>
                         </div>
                     </div>
                 </CardContent>

@@ -1,0 +1,33 @@
+.find-us {
+    display: flex;
+    justify-content: center;
+    & .block {
+        width: 60px;
+        height: 60px;
+        background-color: #c8cdd0;
+        margin-left: 15px;
+        background-position-x: center;
+        background-position-y: center;
+        cursor: pointer;
+        transition: 0.2s;
+    }
+    & .facebook {
+        background-image: url(../../../public/images/facebook_logo.png);
+    }
+    & .twitter {
+        background-image: url(../../../public/images/twitter_logo.png);
+    }
+    & .google {
+        background-image: url(../../../public/images/google_logo.png);
+    }
+    & .linkedin {
+        background-image: url(../../../public/images/linkedin_logo.png);
+    }
+    & .behance {
+        background-image: url(../../../public/images/behance_logo.png);
+    }
+}
+
+.find-us .block:hover {
+    background-color: #939799;
+}

@@ -7,18 +7,18 @@ export const PlacesItem = ({ image, description, date }) => {
         <>
             <Card>
                 <CardContent>
-                    <div class="news__item places">
-                        <div class="news__item-image">
+                    <div className="news__item places">
+                        <div className="news__item-image">
                             <a href="">
                                 <img src={image} alt="" />
                             </a>
                         </div>
-                        <div class="news__item-desc">
+                        <div className="news__item-desc">
                             <a href="">
                                 <p>{description}</p>
                             </a>
                         </div>
-                        <div class="news__item-data">
+                        <div className="news__item-data">
                             <p>{date}</p>
                         </div>
                     </div>
