@@ -10,12 +10,12 @@ export const LifestyleItem = ({ image, description, date }) => {
                 <CardContent>
                     <div className="news__item lifestyle">
                         <div className="news__item-image">
-                            <a href="">
+                            <a href="#/">
                                 <img src={image} alt="" />
                             </a>
                         </div>
                         <div className="news__item-desc">
-                            <a href="">
+                            <a href="#/">
                                 <p>{description}</p>
                             </a>
                         </div>
