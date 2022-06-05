@@ -140,14 +140,14 @@ export const Main = () => {
                                 </div>
                             </div>
                         </Grid>
-                        <Grid item xs={12} sm={6}>
+                        <Grid item xs={12} md={6}>
                             <Contact />
                         </Grid>
                         <Grid
                             container
                             item
                             xs={12}
-                            sm={6}
+                            md={6}
                             direction="row"
                             justifyContent="center"
                             alignItems="center"
