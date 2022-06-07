@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Slider from 'react-slick'
 import slider from 'utils/sliderArray'
+import './Slider.scss'
 
 export default class SimpleSlider extends Component {
     render() {
@@ -13,7 +14,7 @@ export default class SimpleSlider extends Component {
             autoplay: true,
             speed: 2000,
             fade: true,
-            autoplaySpeed: 6000,
+            autoplaySpeed: 4000,
         }
         return (
             <div>
