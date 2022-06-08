@@ -12,7 +12,6 @@ export default class SimpleSlider extends Component {
             slidesToShow: 1,
             slidesToScroll: 1,
             autoplay: true,
-            speed: 2000,
             fade: true,
             autoplaySpeed: 4000,
         }
@@ -21,7 +20,7 @@ export default class SimpleSlider extends Component {
                 <Slider {...settings}>
                     {slider.map(({ id, image }) => (
                         <div key={id}>
-                            <img src={image}></img>
+                            <img src={image} alt="slider"></img>
                         </div>
                     ))}
                 </Slider>
