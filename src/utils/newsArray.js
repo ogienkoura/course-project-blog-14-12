@@ -5,6 +5,7 @@ const news = [
         description:
             'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque, commodi.',
         date: 'March 12. 2020',
+        category: 'News',
     },
     {
         id: 2,
@@ -12,6 +13,7 @@ const news = [
         description:
             'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque, commodi.',
         date: 'March 12. 2020',
+        category: 'News',
     },
     {
         id: 3,
@@ -19,6 +21,7 @@ const news = [
         description:
             'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque, commodi.',
         date: 'March 12. 2020',
+        category: 'News',
     },
 ]
 

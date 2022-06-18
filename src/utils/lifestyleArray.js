@@ -5,6 +5,7 @@ const lifestyle = [
         description:
             'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque, commodi.',
         date: 'March 12. 2020',
+        category: 'Lifestyle',
     },
     {
         id: 2,
@@ -12,6 +13,7 @@ const lifestyle = [
         description:
             'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque, commodi.',
         date: 'March 12. 2020',
+        category: 'Lifestyle',
     },
 ]
 

@@ -19,7 +19,7 @@ export default class SimpleSlider extends Component {
             <div>
                 <Slider {...settings}>
                     {slider.map(({ id, image }) => (
-                        <div key={id}>
+                        <div key={id} className="slider">
                             <img src={image} alt="slider"></img>
                         </div>
                     ))}

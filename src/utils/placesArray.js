@@ -5,6 +5,7 @@ const places = [
         description:
             'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque, commodi.',
         date: 'March 12. 2020',
+        category: 'Places',
     },
     {
         id: 2,
@@ -12,6 +13,7 @@ const places = [
         description:
             'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque, commodi.',
         date: 'March 12. 2020',
+        category: 'Places',
     },
 ]
 

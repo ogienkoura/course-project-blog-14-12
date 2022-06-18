@@ -1,26 +1,27 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 import './Menu.scss'
 
 export const Menu = () => {
     return (
         <ul className="menu">
             <li className="menu__item">
-                <a href="#/">Home</a>
+                <NavLink to="/">Home</NavLink>
             </li>
             <li className="menu__item">
-                <a href="#/">News</a>
+                <NavLink to="/news">News</NavLink>
             </li>
             <li className="menu__item">
-                <a href="#/">Lifestyle</a>
+                <NavLink to="/lifestyle">Lifestyle</NavLink>
             </li>
             <li className="menu__item">
-                <a href="#/">Places</a>
+                <NavLink to="/places">Places</NavLink>
             </li>
             <li className="menu__item">
-                <a href="#/">About Us</a>
+                <NavLink to="/about-us">About Us</NavLink>
             </li>
             <li className="menu__item">
-                <a href="#/">Contact</a>
+                <NavLink to="/contact">Contact</NavLink>
             </li>
         </ul>
     )
