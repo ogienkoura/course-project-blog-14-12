@@ -4,17 +4,17 @@ import './Main.scss'
 import { Grid } from '@mui/material'
 import { Line } from 'components/Line/Line'
 import { NewsItem } from 'components/News/NewsItem'
-import { LifestyleItem } from 'components/Lifestyle/Lifestyle'
-import { PlacesItem } from 'components/Places/Places'
+// import { LifestyleItem } from 'components/Lifestyle/Lifestyle'
+// import { PlacesItem } from 'components/Places/Places'
 import { About } from 'components/About/About'
 import { TeamItem } from 'components/Team/Team'
 import { Contact } from 'components/Contact/Contact'
 import { Find } from 'components/Find/Find'
 import SimpleSlider from 'components/Slider/Slider'
 
-import news from 'utils/newsArray'
-import lifestyle from 'utils/lifestyleArray'
-import places from 'utils/placesArray'
+import articles from 'utils/articlesArray'
+// import lifestyle from 'utils/lifestyleArray'
+// import places from 'utils/placesArray'
 import team from 'utils/teamArray'
 import { Route, Routes } from 'react-router-dom'
 import { NewsPage } from 'pages/News/NewsPage'
@@ -47,23 +47,40 @@ export const Main = () => {
                                     justifyContent="center"
                                     alignItems="center"
                                 >
-                                    {news.map(
-                                        ({ id, image, description, date }) => (
-                                            <Grid
-                                                item
-                                                xs={12}
-                                                sm={6}
-                                                md={4}
-                                                key={id}
-                                            >
-                                                <NewsItem
-                                                    description={description}
-                                                    date={date}
-                                                    image={image}
-                                                />
-                                            </Grid>
-                                        )
-                                    )}
+                                    {articles
+                                        .filter(function (value) {
+                                            if (value.category === 'News') {
+                                                return value.category === 'News'
+                                            } else {
+                                                return false
+                                            }
+                                        })
+                                        .map(
+                                            ({
+                                                id,
+                                                image,
+                                                description,
+                                                date,
+                                                category,
+                                            }) => (
+                                                <Grid
+                                                    item
+                                                    xs={12}
+                                                    sm={6}
+                                                    md={4}
+                                                    key={id}
+                                                >
+                                                    <NewsItem
+                                                        description={
+                                                            description
+                                                        }
+                                                        date={date}
+                                                        image={image}
+                                                        category={category}
+                                                    />
+                                                </Grid>
+                                            )
+                                        )}
                                 </Grid>
                             </section>
 
@@ -81,31 +98,47 @@ export const Main = () => {
                                             spacing={1}
                                             direction="row"
                                         >
-                                            {lifestyle.map(
-                                                ({
-                                                    id,
-                                                    image,
-                                                    description,
-                                                    date,
-                                                    category,
-                                                }) => (
-                                                    <Grid
-                                                        item
-                                                        xs={12}
-                                                        sm={6}
-                                                        key={id}
-                                                    >
-                                                        <LifestyleItem
-                                                            description={
-                                                                description
-                                                            }
-                                                            date={date}
-                                                            image={image}
-                                                            category={category}
-                                                        />
-                                                    </Grid>
-                                                )
-                                            )}
+                                            {articles
+                                                .filter(function (value) {
+                                                    if (
+                                                        value.category ===
+                                                        'Lifestyle'
+                                                    ) {
+                                                        return (
+                                                            value.category ===
+                                                            'Lifestyle'
+                                                        )
+                                                    } else {
+                                                        return false
+                                                    }
+                                                })
+                                                .map(
+                                                    ({
+                                                        id,
+                                                        image,
+                                                        description,
+                                                        date,
+                                                        category,
+                                                    }) => (
+                                                        <Grid
+                                                            item
+                                                            xs={12}
+                                                            sm={6}
+                                                            key={id}
+                                                        >
+                                                            <NewsItem
+                                                                description={
+                                                                    description
+                                                                }
+                                                                date={date}
+                                                                image={image}
+                                                                category={
+                                                                    category
+                                                                }
+                                                            />
+                                                        </Grid>
+                                                    )
+                                                )}
                                         </Grid>
                                     </Grid>
 
@@ -121,29 +154,43 @@ export const Main = () => {
                                             spacing={1}
                                             direction="row"
                                         >
-                                            {places.map(
-                                                ({
-                                                    id,
-                                                    image,
-                                                    description,
-                                                    date,
-                                                }) => (
-                                                    <Grid
-                                                        item
-                                                        xs={12}
-                                                        sm={6}
-                                                        key={id}
-                                                    >
-                                                        <PlacesItem
-                                                            description={
-                                                                description
-                                                            }
-                                                            date={date}
-                                                            image={image}
-                                                        />
-                                                    </Grid>
-                                                )
-                                            )}
+                                            {articles
+                                                .filter(function (value) {
+                                                    if (
+                                                        value.category ===
+                                                        'Places'
+                                                    ) {
+                                                        return (
+                                                            value.category ===
+                                                            'Places'
+                                                        )
+                                                    } else {
+                                                        return false
+                                                    }
+                                                })
+                                                .map(
+                                                    ({
+                                                        id,
+                                                        image,
+                                                        description,
+                                                        date,
+                                                    }) => (
+                                                        <Grid
+                                                            item
+                                                            xs={12}
+                                                            sm={6}
+                                                            key={id}
+                                                        >
+                                                            <NewsItem
+                                                                description={
+                                                                    description
+                                                                }
+                                                                date={date}
+                                                                image={image}
+                                                            />
+                                                        </Grid>
+                                                    )
+                                                )}
                                         </Grid>
                                     </Grid>
                                 </Grid>
@@ -234,6 +281,7 @@ export const Main = () => {
                 <Route path="/places" element={<PlacesPage />} />
                 <Route path="/about-us" element={<AboutUsPage />} />
                 <Route path="/contact" element={<ContactPage />} />
+                <Route path="/news/:category" element={<NewsPage />} />
             </Routes>
         </>
     )
