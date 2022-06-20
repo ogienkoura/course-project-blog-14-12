@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import './About.scss'
 
 export const About = () => {
@@ -18,7 +19,9 @@ export const About = () => {
                 commodi modi cumque temporibus quasi saepe nam, deleniti,
                 excepturi, illum similique! Dolores, esse corrupti.
             </p>
-            <button className="btn">Read more</button>
+            <Link to="/about-us">
+                <button className="btn">Read more</button>
+            </Link>
         </div>
     )
 }

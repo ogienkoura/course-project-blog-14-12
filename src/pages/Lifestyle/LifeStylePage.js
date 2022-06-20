@@ -24,7 +24,7 @@ export const LifestylePage = () => {
                     }
                 })
                 .map(({ id, image, description, date, category }) => (
-                    <Grid item xs={12} sm={6} md={4} key={id}>
+                    <Grid item xs={12} sm={6} key={id}>
                         <NewsItem
                             description={description}
                             date={date}

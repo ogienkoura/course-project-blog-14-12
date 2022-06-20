@@ -2,7 +2,6 @@ import React from 'react'
 import { Card, CardContent } from '@mui/material'
 import './NewsItem.scss'
 import { Link } from 'react-router-dom'
-import articles from 'utils/articlesArray'
 
 export const NewsItem = ({ image, description, date, category }) => {
     return (
@@ -25,11 +24,7 @@ export const NewsItem = ({ image, description, date, category }) => {
                         </div>
 
                         <div className="category">
-                            {articles.map((article, id) => (
-                                <Link key={id} to={article.category}>
-                                    {article.category}
-                                </Link>
-                            ))}
+                            <Link to={`/${category}`}>{category}</Link>
                         </div>
                     </div>
                 </CardContent>

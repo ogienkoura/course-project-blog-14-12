@@ -174,6 +174,7 @@ export const Main = () => {
                                                         image,
                                                         description,
                                                         date,
+                                                        category,
                                                     }) => (
                                                         <Grid
                                                             item
@@ -187,6 +188,9 @@ export const Main = () => {
                                                                 }
                                                                 date={date}
                                                                 image={image}
+                                                                category={
+                                                                    category
+                                                                }
                                                             />
                                                         </Grid>
                                                     )
