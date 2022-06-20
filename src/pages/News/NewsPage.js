@@ -17,8 +17,8 @@ export const NewsPage = () => {
         >
             {articles
                 .filter((value) => {
-                    if (value.category === 'News') {
-                        return value.category === 'News'
+                    if (value.category === 'news') {
+                        return value.category === 'news'
                     } else {
                         return false
                     }

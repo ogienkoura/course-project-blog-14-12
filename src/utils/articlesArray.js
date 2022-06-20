@@ -5,7 +5,7 @@ const articles = [
         description:
             'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque, commodi.',
         date: 'March 12. 2020',
-        category: 'News',
+        category: 'news',
     },
     {
         id: 2,
@@ -13,7 +13,7 @@ const articles = [
         description:
             'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque, commodi.',
         date: 'March 12. 2020',
-        category: 'News',
+        category: 'news',
     },
     {
         id: 3,
@@ -21,7 +21,7 @@ const articles = [
         description:
             'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque, commodi.',
         date: 'March 12. 2020',
-        category: 'News',
+        category: 'news',
     },
     {
         id: 4,
@@ -29,7 +29,7 @@ const articles = [
         description:
             'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque, commodi.',
         date: 'March 12. 2020',
-        category: 'Lifestyle',
+        category: 'lifestyle',
     },
     {
         id: 5,
@@ -37,7 +37,7 @@ const articles = [
         description:
             'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque, commodi.',
         date: 'March 12. 2020',
-        category: 'Lifestyle',
+        category: 'lifestyle',
     },
     {
         id: 6,
@@ -45,7 +45,7 @@ const articles = [
         description:
             'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque, commodi.',
         date: 'March 12. 2020',
-        category: 'Places',
+        category: 'places',
     },
     {
         id: 7,
@@ -53,7 +53,7 @@ const articles = [
         description:
             'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque, commodi.',
         date: 'March 12. 2020',
-        category: 'Places',
+        category: 'places',
     },
 ]
 

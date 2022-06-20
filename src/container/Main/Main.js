@@ -49,8 +49,8 @@ export const Main = () => {
                                 >
                                     {articles
                                         .filter(function (value) {
-                                            if (value.category === 'News') {
-                                                return value.category === 'News'
+                                            if (value.category === 'news') {
+                                                return value.category === 'news'
                                             } else {
                                                 return false
                                             }
@@ -102,11 +102,11 @@ export const Main = () => {
                                                 .filter(function (value) {
                                                     if (
                                                         value.category ===
-                                                        'Lifestyle'
+                                                        'lifestyle'
                                                     ) {
                                                         return (
                                                             value.category ===
-                                                            'Lifestyle'
+                                                            'lifestyle'
                                                         )
                                                     } else {
                                                         return false
@@ -158,11 +158,11 @@ export const Main = () => {
                                                 .filter(function (value) {
                                                     if (
                                                         value.category ===
-                                                        'Places'
+                                                        'places'
                                                     ) {
                                                         return (
                                                             value.category ===
-                                                            'Places'
+                                                            'places'
                                                         )
                                                     } else {
                                                         return false

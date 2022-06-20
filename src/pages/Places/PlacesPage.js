@@ -20,8 +20,8 @@ export const PlacesPage = () => {
         >
             {articles
                 .filter((value) => {
-                    if (value.category === 'Places') {
-                        return value.category === 'Places'
+                    if (value.category === 'places') {
+                        return value.category === 'places'
                     } else {
                         return false
                     }

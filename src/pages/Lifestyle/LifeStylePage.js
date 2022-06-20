@@ -17,8 +17,8 @@ export const LifestylePage = () => {
         >
             {articles
                 .filter(function (value) {
-                    if (value.category === 'Lifestyle') {
-                        return value.category === 'Lifestyle'
+                    if (value.category === 'lifestyle') {
+                        return value.category === 'lifestyle'
                     } else {
                         return false
                     }
