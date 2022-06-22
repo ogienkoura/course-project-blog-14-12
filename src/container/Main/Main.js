@@ -49,7 +49,10 @@ export const Main = () => {
                                 >
                                     {articles
                                         .filter(function (value) {
-                                            if (value.category === 'news') {
+                                            if (
+                                                value.category === 'news' &&
+                                                value.isHome === true
+                                            ) {
                                                 return value.category === 'news'
                                             } else {
                                                 return false
@@ -102,7 +105,8 @@ export const Main = () => {
                                                 .filter(function (value) {
                                                     if (
                                                         value.category ===
-                                                        'lifestyle'
+                                                            'lifestyle' &&
+                                                        value.isHome === true
                                                     ) {
                                                         return (
                                                             value.category ===
@@ -158,7 +162,8 @@ export const Main = () => {
                                                 .filter(function (value) {
                                                     if (
                                                         value.category ===
-                                                        'places'
+                                                            'places' &&
+                                                        value.isHome === true
                                                     ) {
                                                         return (
                                                             value.category ===

@@ -1,5 +1,4 @@
 import { Grid } from '@mui/material'
-import { About } from 'components/About/About'
 import { Contact } from 'components/Contact/Contact'
 import { Find } from 'components/Find/Find'
 import { Line } from 'components/Line/Line'
@@ -21,16 +20,95 @@ export const AboutUsPage = () => {
                         alt="background"
                     ></img>
                 </div>
-                <Grid item xs={12} sm={4}>
+                <Grid item xs={12}>
                     <div className="content__header">
                         <Line />
                         <div className="content__header-title">
                             <h3>About</h3>
                         </div>
                     </div>
-                    <About />
+                    <div className="about__desc">
+                        <p className="about__desc-title">
+                            Fusce faucibus, sapien ac posuere sodales
+                        </p>
+                        <p className="about__desc-text">
+                            Lorem ipsum dolor sit, amet consectetur adipisicing
+                            elit. Eius dignissimos magnam nesciunt, veritatis
+                            eos autem quam distinctio dolores est nostrum! Lorem
+                            ipsum dolor sit, amet consectetur adipisicing elit.
+                            Eius dignissimos magnam nesciunt, veritatis eos
+                            autem quam distinctio dolores est nostrum! Lorem
+                            ipsum dolor sit, amet consectetur adipisicing elit.
+                            Eius dignissimos magnam nesciunt, veritatis eos
+                            autem quam distinctio dolores est nostrum! Lorem
+                            ipsum dolor sit, amet consectetur adipisicing elit.
+                            Eius dignissimos magnam nesciunt, veritatis eos
+                            autem quam distinctio dolores est nostrum! Lorem
+                            ipsum dolor sit, amet consectetur adipisicing elit.
+                            Eius dignissimos magnam nesciunt, veritatis eos
+                            autem quam distinctio dolores est nostrum!
+                        </p>
+                        <p className="about__desc-text">
+                            Lorem ipsum dolor sit, amet consectetur adipisicing
+                            elit. Eius dignissimos magnam nesciunt, veritatis
+                            eos autem quam distinctio dolores est nostrum! Lorem
+                            ipsum dolor sit, amet consectetur adipisicing elit.
+                            Eius dignissimos magnam nesciunt, veritatis eos
+                            autem quam distinctio dolores est nostrum! Lorem
+                            ipsum dolor sit, amet consectetur adipisicing elit.
+                            Eius dignissimos magnam nesciunt, veritatis eos
+                            autem quam distinctio dolores est nostrum! Lorem
+                            ipsum dolor sit, amet consectetur adipisicing elit.
+                            Eius dignissimos magnam nesciunt, veritatis eos
+                            autem quam distinctio dolores est nostrum! Lorem
+                            ipsum dolor sit, amet consectetur adipisicing elit.
+                            Eius dignissimos magnam nesciunt, veritatis eos
+                            autem quam distinctio dolores est nostrum!
+                        </p>
+                        <p className="about__desc-text">
+                            Lorem ipsum dolor sit, amet consectetur adipisicing
+                            elit. Eius dignissimos magnam nesciunt, veritatis
+                            eos autem quam distinctio dolores est nostrum! Lorem
+                            ipsum dolor sit, amet consectetur adipisicing elit.
+                            Eius dignissimos magnam nesciunt, veritatis eos
+                            autem quam distinctio dolores est nostrum! Lorem
+                            ipsum dolor sit, amet consectetur adipisicing elit.
+                            Eius dignissimos magnam nesciunt, veritatis eos
+                            autem quam distinctio dolores est nostrum! Lorem
+                            ipsum dolor sit, amet consectetur adipisicing elit.
+                            Eius dignissimos magnam nesciunt, veritatis eos
+                            autem quam distinctio dolores est nostrum! Lorem
+                            ipsum dolor sit, amet consectetur adipisicing elit.
+                            Eius dignissimos magnam nesciunt, veritatis eos
+                            autem quam distinctio dolores est nostrum!
+                        </p>
+                        <p className="about__desc-text">
+                            Lorem ipsum dolor sit, amet consectetur adipisicing
+                            elit. Eius dignissimos magnam nesciunt, veritatis
+                            eos autem quam distinctio dolores est nostrum! Lorem
+                            ipsum dolor sit, amet consectetur adipisicing elit.
+                            Eius dignissimos magnam nesciunt, veritatis eos
+                            autem quam distinctio dolores est nostrum! Lorem
+                            ipsum dolor sit, amet consectetur adipisicing elit.
+                            Eius dignissimos magnam nesciunt, veritatis eos
+                            autem quam distinctio dolores est nostrum! Lorem
+                            ipsum dolor sit, amet consectetur adipisicing elit.
+                            Eius dignissimos magnam nesciunt, veritatis eos
+                            autem quam distinctio dolores est nostrum! Lorem
+                            ipsum dolor sit, amet consectetur adipisicing elit.
+                            Eius dignissimos magnam nesciunt, veritatis eos
+                            autem quam distinctio dolores est nostrum!
+                        </p>
+                        <p className="about__desc-text-second">
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Repellat culpa veniam praesentium iure
+                            possimus qui maiores commodi modi cumque temporibus
+                            quasi saepe nam, deleniti, excepturi, illum
+                            similique! Dolores, esse corrupti.
+                        </p>
+                    </div>
                 </Grid>
-                <Grid item xs={12} sm={8}>
+                <Grid item xs={12}>
                     <div className="content__header">
                         <Line />
                         <div className="content__header-title">
