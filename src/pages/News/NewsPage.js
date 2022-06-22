@@ -1,12 +1,12 @@
 import { Grid } from '@mui/material'
 import React from 'react'
-// import { useParams } from 'react-router-dom'
 import articles from 'utils/articlesArray'
 import { NewsItem } from 'components/News/NewsItem'
+import { Line } from 'components/Line/Line'
+import { Contact } from 'components/Contact/Contact'
+import { Find } from 'components/Find/Find'
 
 export const NewsPage = () => {
-    // const { category } = useParams()
-    // console.log(useParams())
     return (
         <Grid
             container
@@ -33,6 +33,30 @@ export const NewsPage = () => {
                         />
                     </Grid>
                 ))}
+            <Grid container spacing={2}>
+                <Grid item xs={12}>
+                    <div className="content__header">
+                        <Line />
+                        <div className="content__header-title">
+                            <h3>Contact us</h3>
+                        </div>
+                    </div>
+                </Grid>
+                <Grid item xs={12} md={6}>
+                    <Contact />
+                </Grid>
+                <Grid
+                    container
+                    item
+                    xs={12}
+                    md={6}
+                    direction="row"
+                    justifyContent="center"
+                    alignItems="center"
+                >
+                    <Find />
+                </Grid>
+            </Grid>
         </Grid>
     )
 }

@@ -1,5 +1,12 @@
+import { Grid } from '@mui/material'
 import React from 'react'
+import { ContactForm } from './ContactForm'
+import './ContactPage.scss'
 
 export const ContactPage = () => {
-    return <h1>Contact Page</h1>
+    return (
+        <Grid container spacing={1} direction="row">
+            <ContactForm />
+        </Grid>
+    )
 }
