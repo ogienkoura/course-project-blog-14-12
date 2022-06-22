@@ -17,6 +17,7 @@ export const PlacesPage = () => {
             direction="row"
             justifyContent="center"
             alignItems="center"
+            marginTop={'5px'}
         >
             {articles
                 .filter((value) => {

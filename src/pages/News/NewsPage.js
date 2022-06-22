@@ -14,6 +14,7 @@ export const NewsPage = () => {
             direction="row"
             justifyContent="center"
             alignItems="center"
+            marginTop={'5px'}
         >
             {articles
                 .filter((value) => {

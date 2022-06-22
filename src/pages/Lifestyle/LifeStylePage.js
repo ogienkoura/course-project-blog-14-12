@@ -14,6 +14,7 @@ export const LifestylePage = () => {
             direction="row"
             justifyContent="center"
             alignItems="center"
+            marginTop={'5px'}
         >
             {articles
                 .filter(function (value) {

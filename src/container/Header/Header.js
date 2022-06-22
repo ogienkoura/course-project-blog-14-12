@@ -11,7 +11,7 @@ export const Header = () => {
                 <Container>
                     <Box sx={{ display: 'flex' }}>
                         <Grid container spacing={1}>
-                            <Grid item xs={12} sm={2} md={4}>
+                            <Grid item xs={12} sm={2} md={4} alignSelf="center">
                                 <Logo />
                             </Grid>
                             <Grid item xs={12} sm={10} md={8}>

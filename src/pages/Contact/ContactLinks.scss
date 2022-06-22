@@ -1,0 +1,23 @@
+.contact {
+    font-family: 'Raleway', sans-serif;
+    padding: 0 20px;
+    & h2 {
+        padding-top: 20px;
+    }
+    &-desc {
+        padding-top: 20px;
+    }
+    &-info p {
+        padding-top: 20px;
+    }
+    & a {
+        font-family: 'Roboto', sans-serif;
+        padding-left: 10px;
+        text-decoration: none;
+        color: black;
+        font-size: 18px;
+    }
+    & a:hover {
+        text-decoration: underline;
+    }
+}
