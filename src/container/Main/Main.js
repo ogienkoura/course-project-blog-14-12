@@ -4,8 +4,6 @@ import './Main.scss'
 import { Grid } from '@mui/material'
 import { Line } from 'components/Line/Line'
 import { NewsItem } from 'components/News/NewsItem'
-// import { LifestyleItem } from 'components/Lifestyle/Lifestyle'
-// import { PlacesItem } from 'components/Places/Places'
 import { About } from 'components/About/About'
 import { TeamItem } from 'components/Team/Team'
 import { Contact } from 'components/Contact/Contact'
@@ -13,8 +11,6 @@ import { Find } from 'components/Find/Find'
 import SimpleSlider from 'components/Slider/Slider'
 
 import articles from 'utils/articlesArray'
-// import lifestyle from 'utils/lifestyleArray'
-// import places from 'utils/placesArray'
 import team from 'utils/teamArray'
 import { Route, Routes } from 'react-router-dom'
 import { NewsPage } from 'pages/News/NewsPage'
@@ -22,6 +18,7 @@ import { LifestylePage } from 'pages/Lifestyle/LifeStylePage'
 import { PlacesPage } from 'pages/Places/PlacesPage'
 import { AboutUsPage } from 'pages/AboutUs/AboutUsPage'
 import { ContactPage } from 'pages/Contact/ContactPage'
+import { ArticlePage } from 'pages/Article/ArticlePage'
 
 export const Main = () => {
     return (
@@ -48,16 +45,11 @@ export const Main = () => {
                                     alignItems="center"
                                 >
                                     {articles
-                                        .filter(function (value) {
-                                            if (
+                                        .filter(
+                                            (value) =>
                                                 value.category === 'news' &&
-                                                value.isHome === true
-                                            ) {
-                                                return value.category === 'news'
-                                            } else {
-                                                return false
-                                            }
-                                        })
+                                                value.isHome
+                                        )
                                         .map(
                                             ({
                                                 id,
@@ -80,6 +72,7 @@ export const Main = () => {
                                                         date={date}
                                                         image={image}
                                                         category={category}
+                                                        id={id}
                                                     />
                                                 </Grid>
                                             )
@@ -102,20 +95,12 @@ export const Main = () => {
                                             direction="row"
                                         >
                                             {articles
-                                                .filter(function (value) {
-                                                    if (
+                                                .filter(
+                                                    (value) =>
                                                         value.category ===
                                                             'lifestyle' &&
-                                                        value.isHome === true
-                                                    ) {
-                                                        return (
-                                                            value.category ===
-                                                            'lifestyle'
-                                                        )
-                                                    } else {
-                                                        return false
-                                                    }
-                                                })
+                                                        value.isHome
+                                                )
                                                 .map(
                                                     ({
                                                         id,
@@ -139,6 +124,7 @@ export const Main = () => {
                                                                 category={
                                                                     category
                                                                 }
+                                                                id={id}
                                                             />
                                                         </Grid>
                                                     )
@@ -159,20 +145,12 @@ export const Main = () => {
                                             direction="row"
                                         >
                                             {articles
-                                                .filter(function (value) {
-                                                    if (
+                                                .filter(
+                                                    (value) =>
                                                         value.category ===
                                                             'places' &&
-                                                        value.isHome === true
-                                                    ) {
-                                                        return (
-                                                            value.category ===
-                                                            'places'
-                                                        )
-                                                    } else {
-                                                        return false
-                                                    }
-                                                })
+                                                        value.isHome
+                                                )
                                                 .map(
                                                     ({
                                                         id,
@@ -196,6 +174,7 @@ export const Main = () => {
                                                                 category={
                                                                     category
                                                                 }
+                                                                id={id}
                                                             />
                                                         </Grid>
                                                     )
@@ -290,7 +269,7 @@ export const Main = () => {
                 <Route path="/places" element={<PlacesPage />} />
                 <Route path="/about-us" element={<AboutUsPage />} />
                 <Route path="/contact" element={<ContactPage />} />
-                <Route path="/news/:category" element={<NewsPage />} />
+                <Route path="/news/:id" element={<ArticlePage />} />
             </Routes>
         </>
     )

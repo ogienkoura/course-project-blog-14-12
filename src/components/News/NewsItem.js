@@ -3,21 +3,21 @@ import { Card, CardContent } from '@mui/material'
 import './NewsItem.scss'
 import { Link } from 'react-router-dom'
 
-export const NewsItem = ({ image, description, date, category }) => {
+export const NewsItem = ({ image, description, date, category, id }) => {
     return (
         <>
             <Card>
                 <CardContent>
                     <div className="news__item">
                         <div className="news__item-image">
-                            <a href="#/">
+                            <Link to={`/${category}/${id}`}>
                                 <img src={image} alt="" />
-                            </a>
+                            </Link>
                         </div>
                         <div className="news__item-desc">
-                            <a href="#/">
+                            <Link to={`/${category}/${id}`}>
                                 <p>{description}</p>
-                            </a>
+                            </Link>
                         </div>
                         <div className="news__item-data">
                             <p>{date}</p>

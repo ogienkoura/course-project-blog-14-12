@@ -17,13 +17,7 @@ export const LifestylePage = () => {
             marginTop={'5px'}
         >
             {articles
-                .filter(function (value) {
-                    if (value.category === 'lifestyle') {
-                        return value.category === 'lifestyle'
-                    } else {
-                        return false
-                    }
-                })
+                .filter((value) => value.category === 'lifestyle')
                 .map(({ id, image, description, date, category }) => (
                     <Grid item xs={12} sm={6} key={id}>
                         <NewsItem
@@ -31,6 +25,7 @@ export const LifestylePage = () => {
                             date={date}
                             image={image}
                             category={category}
+                            id={id}
                         />
                     </Grid>
                 ))}

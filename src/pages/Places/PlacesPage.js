@@ -1,6 +1,5 @@
 import { Grid } from '@mui/material'
 import React from 'react'
-// import { useParams } from 'react-router-dom'
 import articles from 'utils/articlesArray'
 import { NewsItem } from 'components/News/NewsItem'
 import { Line } from 'components/Line/Line'
@@ -8,8 +7,6 @@ import { Contact } from 'components/Contact/Contact'
 import { Find } from 'components/Find/Find'
 
 export const PlacesPage = () => {
-    // const { category } = useParams()
-    // console.log(useParams())
     return (
         <Grid
             container
@@ -20,13 +17,7 @@ export const PlacesPage = () => {
             marginTop={'5px'}
         >
             {articles
-                .filter((value) => {
-                    if (value.category === 'places') {
-                        return value.category === 'places'
-                    } else {
-                        return false
-                    }
-                })
+                .filter((value) => value.category === 'places')
                 .map(({ id, image, description, date, category }) => (
                     <Grid item xs={12} sm={6} key={id}>
                         <NewsItem
@@ -34,6 +25,7 @@ export const PlacesPage = () => {
                             date={date}
                             image={image}
                             category={category}
+                            id={id}
                         />
                     </Grid>
                 ))}
