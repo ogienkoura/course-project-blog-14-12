@@ -270,6 +270,8 @@ export const Main = () => {
                 <Route path="/about-us" element={<AboutUsPage />} />
                 <Route path="/contact" element={<ContactPage />} />
                 <Route path="/news/:id" element={<ArticlePage />} />
+                <Route path="/lifestyle/:id" element={<ArticlePage />} />
+                <Route path="/places/:id" element={<ArticlePage />} />
             </Routes>
         </>
     )
