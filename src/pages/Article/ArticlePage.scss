@@ -9,11 +9,16 @@
             padding-right: 50px;
             font-size: 20px;
             line-height: 40px;
+            width: 100%;
+            align-self: center;
         }
     }
     &-text p {
         margin-top: 50px;
         line-height: 35px;
+    }
+    &-image {
+        width: 100%;
     }
 
     &-image img {
