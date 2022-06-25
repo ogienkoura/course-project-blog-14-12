@@ -2,6 +2,7 @@ import { Grid } from '@mui/material'
 import { Contact } from 'components/Contact/Contact'
 import { Find } from 'components/Find/Find'
 import { Line } from 'components/Line/Line'
+
 import { TeamItem } from 'components/Team/Team'
 import React from 'react'
 import team from 'utils/teamArray'

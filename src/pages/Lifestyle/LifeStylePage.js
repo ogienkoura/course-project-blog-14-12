@@ -16,6 +16,7 @@ export const LifestylePage = () => {
             alignItems="center"
             marginTop={'5px'}
         >
+            {window.scrollTo(0, 0)}
             {articles
                 .filter((value) => value.category === 'lifestyle')
                 .map(({ id, image, description, date, category }) => (
