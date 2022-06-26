@@ -2,6 +2,8 @@ import React from 'react'
 import { Card, CardContent } from '@mui/material'
 import './NewsItem.scss'
 import { Link } from 'react-router-dom'
+import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder'
+import { likeButton } from 'components/LikeButton/LikeButton'
 
 export const NewsItem = ({ image, description, date, category, id }) => {
     return (
@@ -22,9 +24,16 @@ export const NewsItem = ({ image, description, date, category, id }) => {
                         <div className="news__item-data">
                             <p>{date}</p>
                         </div>
-
-                        <div className="category">
-                            <Link to={`/${category}`}>{category}</Link>
+                        <div className="news__item-links">
+                            <div className="category">
+                                <Link to={`/${category}`}>{category}</Link>
+                            </div>
+                            <div
+                                className="news__item-like"
+                                onClick={likeButton}
+                            >
+                                <FavoriteBorderIcon className="news__item-like-icon" />
+                            </div>
                         </div>
                     </div>
                 </CardContent>
