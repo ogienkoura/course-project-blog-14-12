@@ -3,7 +3,7 @@ import { Card, CardContent } from '@mui/material'
 import './NewsItem.scss'
 import { Link } from 'react-router-dom'
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder'
-import { likeButton } from 'components/LikeButton/LikeButton'
+import { handleClick } from 'components/LikeButton/LikeButton'
 
 export const NewsItem = ({ image, description, date, category, id }) => {
     return (
@@ -30,7 +30,7 @@ export const NewsItem = ({ image, description, date, category, id }) => {
                             </div>
                             <div
                                 className="news__item-like"
-                                onClick={likeButton}
+                                onClick={handleClick}
                             >
                                 <FavoriteBorderIcon className="news__item-like-icon" />
                             </div>
