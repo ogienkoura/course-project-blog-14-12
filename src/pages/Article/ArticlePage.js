@@ -2,6 +2,7 @@ import { Grid } from '@mui/material'
 import { Contact } from 'components/Contact/Contact'
 import { Find } from 'components/Find/Find'
 import { Line } from 'components/Line/Line'
+import { Reviews } from 'components/Reviews/Reviews'
 import React from 'react'
 import { useParams } from 'react-router-dom'
 import articles from 'utils/articlesArray'
@@ -107,7 +108,7 @@ export const ArticlePage = () => {
                     Reynolds Baker edits… Watch it, above!
                 </p>
             </div> */}
-
+            <Reviews />
             <Grid container spacing={2}>
                 <Grid item xs={12}>
                     <div className="content__header">
