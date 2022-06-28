@@ -6,7 +6,7 @@ import { NewsItem } from 'components/News/NewsItem'
 import { Line } from 'components/Line/Line'
 import { Find } from 'components/Find/Find'
 
-export const LifestylePage = () => {
+export const LifestylePage = ({ toggleLikeState, articlesLikeState }) => {
     return (
         <Grid
             container
@@ -27,6 +27,8 @@ export const LifestylePage = () => {
                             image={image}
                             category={category}
                             id={id}
+                            toggleLikeState={toggleLikeState}
+                            isLiked={articlesLikeState[id]}
                         />
                     </Grid>
                 ))}

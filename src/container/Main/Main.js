@@ -21,7 +21,7 @@ import { ContactPage } from 'pages/Contact/ContactPage'
 import { ArticlePage } from 'pages/Article/ArticlePage'
 import ScrollToTop from 'components/ScrollToTop/ScrollToTop'
 
-export const Main = () => {
+export const Main = ({ toggleLikeState, articlesLikeState }) => {
     return (
         <ScrollToTop>
             <>
@@ -75,6 +75,14 @@ export const Main = () => {
                                                             image={image}
                                                             category={category}
                                                             id={id}
+                                                            toggleLikeState={
+                                                                toggleLikeState
+                                                            }
+                                                            isLiked={
+                                                                articlesLikeState[
+                                                                    id
+                                                                ]
+                                                            }
                                                         />
                                                     </Grid>
                                                 )
@@ -129,6 +137,14 @@ export const Main = () => {
                                                                         category
                                                                     }
                                                                     id={id}
+                                                                    toggleLikeState={
+                                                                        toggleLikeState
+                                                                    }
+                                                                    isLiked={
+                                                                        articlesLikeState[
+                                                                            id
+                                                                        ]
+                                                                    }
                                                                 />
                                                             </Grid>
                                                         )
@@ -181,6 +197,14 @@ export const Main = () => {
                                                                         category
                                                                     }
                                                                     id={id}
+                                                                    toggleLikeState={
+                                                                        toggleLikeState
+                                                                    }
+                                                                    isLiked={
+                                                                        articlesLikeState[
+                                                                            id
+                                                                        ]
+                                                                    }
                                                                 />
                                                             </Grid>
                                                         )
@@ -271,9 +295,33 @@ export const Main = () => {
                         }
                     />
 
-                    <Route path="/news" element={<NewsPage />} />
-                    <Route path="/lifestyle" element={<LifestylePage />} />
-                    <Route path="/places" element={<PlacesPage />} />
+                    <Route
+                        path="/news"
+                        element={
+                            <NewsPage
+                                toggleLikeState={toggleLikeState}
+                                articlesLikeState={articlesLikeState}
+                            />
+                        }
+                    />
+                    <Route
+                        path="/lifestyle"
+                        element={
+                            <LifestylePage
+                                toggleLikeState={toggleLikeState}
+                                articlesLikeState={articlesLikeState}
+                            />
+                        }
+                    />
+                    <Route
+                        path="/places"
+                        element={
+                            <PlacesPage
+                                toggleLikeState={toggleLikeState}
+                                articlesLikeState={articlesLikeState}
+                            />
+                        }
+                    />
                     <Route path="/about-us" element={<AboutUsPage />} />
                     <Route path="/contact" element={<ContactPage />} />
                     <Route path="/news/:id" element={<ArticlePage />} />

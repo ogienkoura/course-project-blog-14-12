@@ -5,20 +5,17 @@ import { Line } from 'components/Line/Line'
 import { Reviews } from 'components/Reviews/Reviews'
 import React from 'react'
 import { useParams } from 'react-router-dom'
-import articles from 'utils/articlesArray'
+import articles, {getArticlesObject} from 'utils/articlesArray'
 import './ArticlePage.scss'
 
-function getArticle(id) {
-    return articles.find((article) => article.id === id)
-}
 
-export const ArticlePage = () => {
-    let params = useParams()
-    let article = getArticle(parseInt(params.id))
+export const ArticlePage = ({articleObject = getArticlesObject(articles),
+}) => {
+    let {id} = useParams()
     return (
         <div class="article">
             <div
-                dangerouslySetInnerHTML={{ __html: article.fullDescription }}
+                dangerouslySetInnerHTML={{ __html: articleObject[id].fullDescription }}
             ></div>
             {/* <h1 class="article-title">
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit.
@@ -108,7 +105,7 @@ export const ArticlePage = () => {
                     Reynolds Baker edits… Watch it, above!
                 </p>
             </div> */}
-            <Reviews />
+            <Reviews /> 
             <Grid container spacing={2}>
                 <Grid item xs={12}>
                     <div className="content__header">
@@ -133,6 +130,7 @@ export const ArticlePage = () => {
                     <Find />
                 </Grid>
             </Grid>
+            
         </div>
     )
 }

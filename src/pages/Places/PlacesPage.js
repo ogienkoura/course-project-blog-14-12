@@ -6,7 +6,7 @@ import { Line } from 'components/Line/Line'
 import { Contact } from 'components/Contact/Contact'
 import { Find } from 'components/Find/Find'
 
-export const PlacesPage = () => {
+export const PlacesPage = ({ toggleLikeState, articlesLikeState }) => {
     return (
         <Grid
             container
@@ -26,6 +26,8 @@ export const PlacesPage = () => {
                             image={image}
                             category={category}
                             id={id}
+                            toggleLikeState={toggleLikeState}
+                            isLiked={articlesLikeState[id]}
                         />
                     </Grid>
                 ))}

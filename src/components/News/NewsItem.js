@@ -3,9 +3,17 @@ import { Card, CardContent } from '@mui/material'
 import './NewsItem.scss'
 import { Link } from 'react-router-dom'
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder'
-import { handleClick } from 'components/LikeButton/LikeButton'
+// import { handleClick } from 'components/LikeButton/LikeButton'
 
-export const NewsItem = ({ image, description, date, category, id }) => {
+export const NewsItem = ({
+    image,
+    description,
+    date,
+    category,
+    id,
+    isLiked = false,
+    toggleLikeState,
+}) => {
     return (
         <>
             <Card>
@@ -29,8 +37,12 @@ export const NewsItem = ({ image, description, date, category, id }) => {
                                 <Link to={`/${category}`}>{category}</Link>
                             </div>
                             <div
-                                className="news__item-like"
-                                onClick={handleClick}
+                                className={
+                                    isLiked
+                                        ? 'news__item-like liked'
+                                        : 'news__item-like '
+                                }
+                                onClick={() => toggleLikeState(id)}
                             >
                                 <FavoriteBorderIcon className="news__item-like-icon" />
                             </div>
