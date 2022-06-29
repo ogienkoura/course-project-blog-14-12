@@ -8,6 +8,13 @@
     align-items: center;
     list-style: none;
     margin-top: 18px;
+    padding-left: 0;
+    @media (max-width: 1024px) {
+        justify-content: center;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        white-space: nowrap;
+    }
 }
 
 .menu a {
@@ -22,6 +29,10 @@
     padding: 5px;
     transition: 0.3s;
     font-family: 'Raleway', sans-serif;
+    font-size: 18px;
+    @media (max-width: 1024px) {
+        font-size: 15px;
+    }
 }
 
 .menu a:hover {

@@ -16,7 +16,7 @@ export default class SimpleSlider extends Component {
             autoplaySpeed: 4000,
         }
         return (
-            <div>
+            <div className="slider-wrapper">
                 <Slider {...settings}>
                     {slider.map(({ id, image }) => (
                         <div key={id} className="slider">

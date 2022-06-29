@@ -11,6 +11,10 @@
             line-height: 40px;
             width: 100%;
             align-self: center;
+            @media (max-width: 768px) {
+                text-align: center;
+                margin-top: 20px;
+            }
         }
     }
     &-text p {
@@ -33,17 +37,31 @@
         width: 100%;
         padding-left: 40px;
         padding-right: 50px;
+        @media (max-width: 768px) {
+            margin-bottom: 20px;
+        }
     }
     &-video {
         height: 100%;
         width: 100%;
+        @media (max-width: 768px) {
+            // display: none;
+        }
     }
 }
 
 .parts {
     display: flex;
     margin-top: 50px;
+    &.one {
+        @media (max-width: 768px) {
+            flex-wrap: wrap;
+        }
+    }
     &.two {
         align-items: center;
+        @media (max-width: 768px) {
+            flex-wrap: wrap;
+        }
     }
 }
