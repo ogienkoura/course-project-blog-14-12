@@ -13,6 +13,7 @@ export const NewsItem = ({
     id,
     isLiked = false,
     toggleLikeState,
+    addArticleToFavourites,
 }) => {
     return (
         <>
@@ -42,7 +43,10 @@ export const NewsItem = ({
                                         ? 'news__item-like liked'
                                         : 'news__item-like '
                                 }
-                                onClick={() => toggleLikeState(id)}
+                                onClick={() => {
+                                    toggleLikeState(id)
+                                    addArticleToFavourites(id)
+                                }}
                             >
                                 <FavoriteBorderIcon className="news__item-like-icon" />
                             </div>

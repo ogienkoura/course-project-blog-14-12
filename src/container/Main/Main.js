@@ -20,8 +20,14 @@ import { AboutUsPage } from 'pages/AboutUs/AboutUsPage'
 import { ContactPage } from 'pages/Contact/ContactPage'
 import { ArticlePage } from 'pages/Article/ArticlePage'
 import ScrollToTop from 'components/ScrollToTop/ScrollToTop'
+import { FavouritesPage } from 'pages/Favourites/FavouritesPage'
 
-export const Main = ({ toggleLikeState, articlesLikeState }) => {
+export const Main = ({
+    toggleLikeState,
+    articlesLikeState,
+    removeArticleFromFavourites,
+    addArticleToFavourites,
+}) => {
     return (
         <ScrollToTop>
             <>
@@ -82,6 +88,9 @@ export const Main = ({ toggleLikeState, articlesLikeState }) => {
                                                                 articlesLikeState[
                                                                     id
                                                                 ]
+                                                            }
+                                                            addArticleToFavourites={
+                                                                addArticleToFavourites
                                                             }
                                                         />
                                                     </Grid>
@@ -327,6 +336,19 @@ export const Main = ({ toggleLikeState, articlesLikeState }) => {
                     <Route path="/news/:id" element={<ArticlePage />} />
                     <Route path="/lifestyle/:id" element={<ArticlePage />} />
                     <Route path="/places/:id" element={<ArticlePage />} />
+                    <Route
+                        path="/favourites"
+                        element={
+                            <FavouritesPage
+                                articlesLikeState={articlesLikeState}
+                                toggleLikeState={toggleLikeState}
+                                removeArticleFromFavourites={
+                                    removeArticleFromFavourites
+                                }
+                                addArticleToFavourites={addArticleToFavourites}
+                            />
+                        }
+                    />
                 </Routes>
             </>
         </ScrollToTop>

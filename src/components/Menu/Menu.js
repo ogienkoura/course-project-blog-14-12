@@ -23,6 +23,9 @@ export const Menu = () => {
             <li className="menu__item">
                 <NavLink to="/contact">Contact</NavLink>
             </li>
+            <li className="menu__item">
+                <NavLink to="/favourites">Favourites</NavLink>
+            </li>
         </ul>
     )
 }
